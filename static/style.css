@@ -1,0 +1,134 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background Cyber Grid Accent */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.06) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* --------------------------------------------------------------------------
+   In-Bounds Top Header Bar (Main Dashboard View)
+   -------------------------------------------------------------------------- */
+.top-header-bar {
+  background: rgba(11, 17, 32, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-glow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 100%;
+}
+
+.top-header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  gap: 1rem;
+}
+
+.top-header-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.header-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.header-brand-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0B0F19;
+  font-weight: 900;
+  font-size: 1.1rem;
+  box-shadow: 0 0 14px var(--accent-cyan-glow);
+  flex-shrink: 0;
+}
+
+.header-main-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-tagline {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.top-header-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.header-user-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.header-user-label {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.header-user-name {
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
